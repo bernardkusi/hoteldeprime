@@ -150,12 +150,14 @@ main{
           font-size: .9rem;
           padding-bottom: .6rem;
           font-weight: 600;
+          width: 100%;
           // text-align: center;
         }
 
         .roomdetails{
           color: $text;
           font-size: .85rem;
+          display: none;
         }
 
         transition: all .4s !important;
@@ -173,6 +175,10 @@ main{
         &:hover .info{
           top: auto;
           bottom: 0;
+
+          .roomdetails{
+            display: block;
+          }
         }
 
         &:hover .click{

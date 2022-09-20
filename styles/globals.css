@@ -173,11 +173,13 @@ main #rooms .roomgrid .room .info .roomname {
   font-size: .9rem;
   padding-bottom: .6rem;
   font-weight: 600;
+  width: 100%;
 }
 
 main #rooms .roomgrid .room .info .roomdetails {
   color: #313131;
   font-size: .85rem;
+  display: none;
 }
 
 main #rooms .roomgrid .room .click {
@@ -193,6 +195,10 @@ main #rooms .roomgrid .room .click {
 main #rooms .roomgrid .room:hover .info {
   top: auto;
   bottom: 0;
+}
+
+main #rooms .roomgrid .room:hover .info .roomdetails {
+  display: block;
 }
 
 main #rooms .roomgrid .room:hover .click {
