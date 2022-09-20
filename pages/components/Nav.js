@@ -18,8 +18,8 @@ const Nav = ({togglenav,navopen}) => {
             <Link href="/">Home</Link>
             <Link href="/rooms">Our&nbsp;Rooms</Link>
             <Link href="/about">About&nbsp;Us</Link>
-            <a href="/services">Our&nbsp;Services</a>
-            <a href="/contact">Contact&nbsp;Us</a>
+            <Link href="/services">Our&nbsp;Services</Link>
+            <Link href="/contact">Contact&nbsp;Us</Link>
         </ul>
 
         <div className="bars" onClick={togglenav}>
