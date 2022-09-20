@@ -32,7 +32,7 @@ img{
     @extend .center;
     max-width: 1300px;
     position: relative;
-    padding: 4rem 2rem 2rem;
+    padding: 4.5rem 2rem 2rem;
 
     .heading{
         text-align: center;
@@ -40,5 +40,31 @@ img{
         font-size:1.5rem;
         font-weight:600;
         padding: 1rem 0;
+    }
+}
+
+.banner{
+    width: 100%;
+    background: lightgrey;
+    height: calc(180px + 4vw);
+    text-align: center;
+    padding-top: calc(90px + 4vw);
+    margin-bottom: 2rem;
+    position: relative;
+
+    img{
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 0;
+    }
+
+    h3{
+        font-size: 1.8rem;
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        background: rgba(0, 0, 0, 0.2);
+        padding: .8rem;
     }
 }

@@ -1,11 +1,13 @@
 import React from 'react'
+import Header from './components/Header'
 import Pageheader from './components/Pageheader'
 
-const about = () => {
+const about = ({closenav}) => {
   return (
     <>
     <Pageheader title="Hotel about"/>
     <div className='page'>
+        <Header title={"About hotelDeprime"} closenav={closenav}/>
        <h3 className="heading">Who we are</h3>
       <p className="text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolores

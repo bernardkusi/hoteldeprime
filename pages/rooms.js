@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Header from './components/Header'
 import Pageheader from './components/Pageheader'
 
 const rooms = ({closenav}) => {
@@ -10,6 +11,7 @@ const rooms = ({closenav}) => {
   <Pageheader title="hotel Rooms"/>
     <div id="rooms">
     <div className="page">
+    <Header title={"View all rooms here"}/>
         <h3 className="heading">All Rooms</h3>
         <div className="roomgrid">
             <div className="room">

@@ -285,5 +285,42 @@ footer{
   }
 }
 
+#servicepage{
+  .serviceflex{
+    padding: 6.5rem 0 5.5rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+
+    &:nth-child(odd){
+      flex-direction: row-reverse;
+    }
+
+    .serviceimage{
+      width: 45%;
+      height: 420px;
+      background: lightgrey;
+      box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.101);
+      
+    }
+
+    .servicedetails{
+      width: 46%;
+      .servicename{
+        color: $secondary;
+        font-size: 1.2rem;
+        padding: .7rem 0;
+      }
+
+      .text{
+        font-size: .9rem;
+        line-height: 110%;
+        color: $text;
+      }
+    }
+  }
+}
+
 @import './reusables';
 @import './media';
