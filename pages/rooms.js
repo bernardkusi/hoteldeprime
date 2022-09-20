@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import Pageheader from './components/Pageheader'
 
 const rooms = ({closenav}) => {
-    useEffect(() => {
-        closenav();	
-      }, [])
+    // useEffect(() => {
+    //     closenav();	
+    //   }, [])
   return (
   <>
   <Pageheader title="hotel Rooms"/>
