@@ -1,0 +1,283 @@
+$primary:rgb(119, 114, 114);
+$secondary:rgb(246, 50, 24);
+$text:rgb(49, 49, 49);
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+ 
+nav{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  background: $primary;
+  padding: 1rem 2rem .5rem;
+  top: 0;
+  height: 70px;
+  z-index: 10;
+  align-items: flex-end;
+
+  ul{
+    display: flex;
+    gap: 1.5rem;
+
+    a{
+      text-decoration: none;
+      color: #fff;
+      transition: all .4s;
+      &:hover{
+        color: $secondary;
+      }
+    }
+  }
+
+  .bars{
+    display: none;
+  }
+
+  & .logo{
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.8rem;
+    align-self: center;
+  }
+}
+
+main{
+  min-height: 100vh;
+  #homesection{
+    padding: 9rem 3rem 8rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url('../public/images/bacd.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 700px;
+
+    .intro{
+      padding: 3rem 1rem;
+      max-width: 600px;
+
+      h1{
+        font-size: 4.6rem;
+        font-weight: 800;
+        color: #fff;
+      }
+
+      h3{
+        padding: 1.7rem 0;
+        color: $text;
+        font-weight: 500;
+        color: lighten($secondary,30);
+      }
+
+    }
+  }
+
+  #services{
+    padding-bottom: 3rem;
+    .serviceflex{
+      display:flex;
+      justify-content: space-evenly;
+      gap:2rem;
+      padding-top: 3rem;
+
+      .service{
+        max-width:280px;
+        padding:1rem;
+        box-shadow:0 0 .4rem rgba(0, 0, 0, 0.203);
+        border-radius:.5rem;
+        text-align: center;
+
+        .serviceicon{
+          font-size: 2.5rem;
+          color: grey;
+        }
+
+        p.servicename{
+          text-align:center;
+          color:$secondary;
+          font-size:.9rem;
+          font-weight: 600;
+        }
+
+        p.servicedetails{
+          font-size: .8rem;
+          color:$text;
+        }
+      }
+    }
+  }
+
+  #rooms{
+    background: rgb(243, 243, 243);
+    padding-bottom: 3rem;
+
+    .roomgrid{
+      @extend .center;
+      padding-top: 3rem;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(4,1fr);
+      gap: 2rem 1rem;
+      // justify-items: center;
+
+      .room{
+        @extend.center;
+        position: relative;
+        overflow: hidden;
+        max-width: 350px;
+
+        .roomimage{
+          width: 100%;
+          height: 200px;
+          background: lightgrey;
+        }
+
+       .info{
+        position: absolute;
+        top: calc(100% - 2.8rem);
+        background: #fff;
+        padding: .7rem;
+        transition: all .4s !important;
+        bottom: auto;
+
+        .roomname{
+          color: $secondary;
+          font-size: .9rem;
+          padding-bottom: .6rem;
+          font-weight: 600;
+          // text-align: center;
+        }
+
+        .roomdetails{
+          color: $text;
+          font-size: .85rem;
+        }
+
+        transition: all .4s !important;
+       }
+
+        .click{
+          position: absolute;
+          top: 1rem;
+          right: -4rem;
+          transition: all .4s;
+          font-size: 1.6rem;
+          padding: .2rem .65rem;
+        }
+
+        &:hover .info{
+          top: auto;
+          bottom: 0;
+        }
+
+        &:hover .click{
+          right: 1rem;
+        }
+      }
+    }
+  }
+
+  #contact{
+    .contactflex{
+      display: flex;
+      gap: 3rem;
+      padding: 3rem 0 6rem;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .map{
+        width: 45%;
+        background: lightgrey;  
+        height: 380px;  
+        // box-sizing: content-box;
+        border: 8px solid lighten($secondary,11);    
+      }
+
+      .contact{
+        width: 45%;
+        text-align: center;
+
+
+        h3{
+          font-size: 1.8rem;
+          color: $text;
+          padding-bottom: 1rem;
+        }
+
+        .social{
+          padding-top: .3rem;
+
+          i{
+            color: $text;
+            font-size: 1.55rem;
+            padding-right: 1rem;
+          }
+
+          a{
+            color: $secondary;
+            font-weight: 500;
+            text-decoration: none;
+          }
+        }
+
+        .telephone{
+          i{
+            color: $text;
+            font-size: 1.55rem;
+            padding-right: 1rem;
+          }
+          a{
+            padding: .3rem;
+            text-decoration: none;
+            color: grey;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  background: darken($primary,30);
+
+  div{
+  padding: 3rem 2rem 7rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+
+  ul{
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .45rem;
+
+    a{
+      text-decoration: none;
+      color: lightgrey;
+      font-size: .95rem;
+      &:hover{
+        color: $secondary;
+      }
+    }
+  }
+
+  p{
+    color: #fff;
+    max-width: 500px;
+  }
+  }
+}
+
+@import './reusables';
+@import './media';

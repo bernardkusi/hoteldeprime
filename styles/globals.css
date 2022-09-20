@@ -1,26 +1,475 @@
-html,
-body {
+* {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  background: #777272;
+  padding: 1rem 2rem .5rem;
+  top: 0;
+  height: 70px;
+  z-index: 10;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+nav ul a:hover {
+  color: #f63218;
+}
+
+nav .bars {
+  display: none;
+}
+
+nav .logo {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.8rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main {
+  min-height: 100vh;
+}
+
+main #homesection {
+  padding: 9rem 3rem 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../public/images/bacd.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../public/images/bacd.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 700px;
+}
+
+main #homesection .intro {
+  padding: 3rem 1rem;
+  max-width: 600px;
+}
+
+main #homesection .intro h1 {
+  font-size: 4.6rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+main #homesection .intro h3 {
+  padding: 1.7rem 0;
+  color: #313131;
+  font-weight: 500;
+  color: #fcb5ab;
+}
+
+main #services {
+  padding-bottom: 3rem;
+}
+
+main #services .serviceflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+main #services .serviceflex .service {
+  max-width: 280px;
+  padding: 1rem;
+  -webkit-box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.203);
+          box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.203);
+  border-radius: .5rem;
+  text-align: center;
+}
+
+main #services .serviceflex .service .serviceicon {
+  font-size: 2.5rem;
+  color: grey;
+}
+
+main #services .serviceflex .service p.servicename {
+  text-align: center;
+  color: #f63218;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+main #services .serviceflex .service p.servicedetails {
+  font-size: .8rem;
+  color: #313131;
+}
+
+main #rooms {
+  background: #f3f3f3;
+  padding-bottom: 3rem;
+}
+
+main #rooms .roomgrid {
+  padding-top: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 2rem 1rem;
+}
+
+main #rooms .roomgrid .room {
+  position: relative;
+  overflow: hidden;
+  max-width: 350px;
+}
+
+main #rooms .roomgrid .room .roomimage {
+  width: 100%;
+  height: 200px;
+  background: lightgrey;
+}
+
+main #rooms .roomgrid .room .info {
+  position: absolute;
+  top: calc(100% - 2.8rem);
+  background: #fff;
+  padding: .7rem;
+  -webkit-transition: all .4s !important;
+  transition: all .4s !important;
+  bottom: auto;
+  transition: all .4s !important;
+}
+
+main #rooms .roomgrid .room .info .roomname {
+  color: #f63218;
+  font-size: .9rem;
+  padding-bottom: .6rem;
+  font-weight: 600;
+}
+
+main #rooms .roomgrid .room .info .roomdetails {
+  color: #313131;
+  font-size: .85rem;
+}
+
+main #rooms .roomgrid .room .click {
+  position: absolute;
+  top: 1rem;
+  right: -4rem;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  font-size: 1.6rem;
+  padding: .2rem .65rem;
+}
+
+main #rooms .roomgrid .room:hover .info {
+  top: auto;
+  bottom: 0;
+}
+
+main #rooms .roomgrid .room:hover .click {
+  right: 1rem;
+}
+
+main #contact .contactflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  padding: 3rem 0 6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main #contact .contactflex .map {
+  width: 45%;
+  background: lightgrey;
+  height: 380px;
+  border: 8px solid #f8624e;
+}
+
+main #contact .contactflex .contact {
+  width: 45%;
+  text-align: center;
+}
+
+main #contact .contactflex .contact h3 {
+  font-size: 1.8rem;
+  color: #313131;
+  padding-bottom: 1rem;
+}
+
+main #contact .contactflex .contact .social {
+  padding-top: .3rem;
+}
+
+main #contact .contactflex .contact .social i {
+  color: #313131;
+  font-size: 1.55rem;
+  padding-right: 1rem;
+}
+
+main #contact .contactflex .contact .social a {
+  color: #f63218;
+  font-weight: 500;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+main #contact .contactflex .contact .telephone i {
+  color: #313131;
+  font-size: 1.55rem;
+  padding-right: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+main #contact .contactflex .contact .telephone a {
+  padding: .3rem;
+  text-decoration: none;
+  color: grey;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #292727;
+}
+
+footer div {
+  padding: 3rem 2rem 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+}
+
+footer div ul {
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .45rem;
+}
+
+footer div ul a {
+  text-decoration: none;
+  color: lightgrey;
+  font-size: .95rem;
+}
+
+footer div ul a:hover {
+  color: #f63218;
+}
+
+footer div p {
+  color: #fff;
+  max-width: 500px;
+}
+
+.click {
+  padding: .9rem 1.2rem;
+  font-weight: bold;
+  background: #f63218;
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  color: #fff;
+  border-radius: .45rem;
+  cursor: pointer;
+}
+
+.click:hover {
+  color: #f63218;
+  background: #fff;
+}
+
+.center, main #rooms .roomgrid, main #rooms .roomgrid .room, .page {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.page {
+  max-width: 1300px;
+  position: relative;
+  padding: 4rem 2rem 2rem;
+}
+
+.page .heading {
+  text-align: center;
+  color: #f63218;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem 0;
+}
+
+@media (max-width: 960px) {
+  #rooms .roomgrid {
+    -ms-grid-columns: (1fr)[3] !important;
+        grid-template-columns: repeat(3, 1fr) !important;
   }
-  body {
-    color: white;
-    background: black;
+  #services .serviceflex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
+
+@media (max-width: 860px) {
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 65px;
+    gap: 3rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+  }
+  nav .logo {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .bars {
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 18px;
+    right: 2rem;
+    top: 2rem;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  nav .bars .bar {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    position: relative;
+  }
+  nav .bars .bar::before, nav .bars .bar::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    position: absolute;
+    top: 7px;
+  }
+  nav .bars .bar::after {
+    top: 15px;
+  }
+  #homesection {
+    padding: 9rem 1rem 8rem !important;
+  }
+  #homesection .intro {
+    padding: 3rem 0;
+  }
+  #homesection .intro h1 {
+    font-size: 3.2rem !important;
+  }
+  #homesection .intro h3 {
+    font-size: 1.1rem;
+  }
+  footer div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer div ul {
+    padding-left: 0;
+  }
+  #contact .contactflex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact .contactflex > div {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 760px) {
+  #rooms .roomgrid {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 570px) {
+  #rooms .roomgrid {
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+/*# sourceMappingURL=globals.css.map */

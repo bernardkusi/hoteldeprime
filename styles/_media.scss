@@ -1,0 +1,131 @@
+@media (max-width:960px) {
+
+    #rooms{    
+        .roomgrid{
+          grid-template-columns: repeat(3,1fr) !important;
+    
+        }
+      }
+
+      #services{
+        .serviceflex{
+          flex-wrap: wrap;
+        }
+      }
+}
+
+@media (max-width:860px) {
+    nav{
+        flex-direction: column;
+        align-items: flex-start ;
+        height: 65px;
+        gap: 3rem;
+        padding-bottom: 1rem;
+        overflow: hidden;
+
+        .logo{
+            align-self: flex-start;
+        }
+
+        ul{
+            flex-direction: column;
+        }
+
+        .bars{
+            display: block;
+            position: absolute;
+            width: 22px;
+            height: 18px;
+            right: 2rem;
+            top: 2rem;
+            // background: red;
+            transform: scale(1.1);
+
+            .bar{
+                width: 100%;
+                height: 3px;
+                background: #fff;
+                border-radius: 2px;
+                position: relative;
+
+
+                &::before,&::after{
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    background: #fff;
+                    border-radius: 2px;
+                    position: absolute;
+                    top: 7px;
+                }
+
+                &::after{
+                    top: 15px;
+                }
+
+
+
+            }
+        }
+    }
+
+    #homesection{
+        padding: 9rem 1rem 8rem !important;
+    
+        .intro{
+          padding: 3rem 0;
+    
+          h1{
+            font-size: 3.2rem !important;
+          }
+    
+          h3{
+            font-size: 1.1rem;
+          }
+    
+        }
+      }
+
+    footer{
+        div{
+            flex-direction: column;
+        align-items: flex-start;
+
+        ul{
+            padding-left: 0;
+        }
+        }
+    }
+
+    #contact{
+        .contactflex{
+            flex-direction: column;
+
+            &>div{
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+@media (max-width:760px) {
+
+    
+    #rooms{
+        .roomgrid{
+          grid-template-columns: repeat(2,1fr) !important;
+    
+        }
+      }
+}
+
+@media (max-width:570px) {
+
+    
+    #rooms{
+        .roomgrid{
+          grid-template-columns: repeat(1,1fr) !important;
+    
+        }
+      }
+}
