@@ -7,7 +7,7 @@ import Pageheader from './components/Pageheader';
 import Rooms from './components/Rooms';
 import Services from './components/Services';
 
-export default function Home({closenav}) {
+export default function Home({closenav,setbookingform}) {
 	useEffect(() => {
 	  closenav();	
 	}, [])
@@ -16,7 +16,7 @@ export default function Home({closenav}) {
 		<div className={styles.container}>
 			<Pageheader title="Hotel"/>
 
-		<Homesection/>
+		<Homesection setbookingform={setbookingform}/>
 		<Services/>
 		<Rooms/>
 		<Contact/>

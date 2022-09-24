@@ -27,6 +27,7 @@ const Footer = () => {
                 <a href="#">Our&nbsp;Blog</a>
             </ul>
         </div>
+        <p className="copy">Copyright&copy;&nbsp;Bernard-Dwumfour&nbsp;2022</p>
 		</footer>
 	);
 };

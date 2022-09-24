@@ -252,6 +252,18 @@ footer{
   display: flex;
   justify-content: center;
   background: darken($primary,30);
+  position: relative;
+
+  p.copy{
+    // @extend .center;
+    position: absolute;
+    font-size: .8rem;
+    color: #fff;
+    text-align: center;
+    width: max-content;
+    bottom: 2rem;
+
+  }
 
   div{
   padding: 3rem 2rem 7rem;

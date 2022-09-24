@@ -64,7 +64,102 @@ img{
         color: #fff;
         z-index: 1;
         position: relative;
-        background: rgba(0, 0, 0, 0.2);
+        background: linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.2),transparent);
         padding: .8rem;
+    }
+}
+
+.backdrop{
+    position: fixed;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.467);
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.visible{
+    display: flex !important;
+}
+
+.form{
+    width: 96%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: .4rem;
+    padding: 1rem ;
+
+    form{
+        .formcontrol{
+            padding: .3rem 0;
+            display: flex;
+            flex-direction: column-reverse;
+
+            input,select,textarea{
+                width: 100%;
+                padding:  .45rem .7rem ;
+                border:1px solid  lightgrey;
+                display: block;
+                outline: none;
+                border-radius: .3rem;
+                resize: none;
+            }
+            
+
+            label{
+                color: grey;
+                font-size: .9rem;
+            }
+        }
+
+        .label{
+            color: $secondary;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-align: center;
+            padding: .5rem 0;
+        }
+
+        .click{
+            @extend .center;
+        }
+    }
+}
+
+.clickables{
+    position: fixed;
+    right: 0;
+    bottom: 30vh;
+    // background: yellow;
+    z-index: 10;
+    direction: rtl;
+    
+    .clickable{
+        display: block;
+        margin: .4rem;
+        box-shadow: 0 0 .4rem rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: row-reverse;
+
+        span{
+            display: none;
+            visibility: hidden;
+            transition: all .4s;
+            margin-left: 1rem;
+        }
+
+        i{
+            font-size: 1.3rem;
+        }
+
+        &:hover{
+            span{
+                display: inline-block;
+                visibility: visible;
+            }
+        }
     }
 }
