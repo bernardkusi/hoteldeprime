@@ -12,6 +12,16 @@
           flex-wrap: wrap;
         }
       }
+
+      #reviews{
+        .reviewflex{
+          .review{
+            &:nth-child(3){
+              display: none;
+            }
+          }
+        }
+      }
 }
 
 @media (max-width:860px) {
@@ -153,6 +163,18 @@
         .roomgrid{
           grid-template-columns: repeat(1,1fr) !important;
     
+        }
+      }
+
+      #reviews{
+        .reviewflex{
+          flex-direction: column;
+          align-items: center;
+          .review{
+            &:nth-child(3){
+              display: block;
+            }
+          }
         }
       }
 }

@@ -188,6 +188,42 @@ main{
     }
   }
 
+  #reviews{
+    // background: rgb(243, 243, 243);
+
+    .reviewflex{
+      display: flex;
+      gap: 2rem;
+      padding: 3rem 0;
+      justify-content: space-evenly;
+
+      .review{
+        padding: 1rem;
+        background: #fff;
+        border-radius: .5rem;
+        max-width: 380px;
+
+        .name{
+          color: $secondary;
+          font-size: 1rem;
+          padding: .4rem 1rem;
+          font-weight: 600;
+        }
+
+        .comment{
+          color: $text;
+          font-size: .95rem;
+
+          span{
+            font-size: 1.15rem;
+            color: grey;
+            padding: 0 .5rem;
+          }
+        }
+      }
+    }
+  }
+
   #contact{
     .contactflex{
       display: flex;

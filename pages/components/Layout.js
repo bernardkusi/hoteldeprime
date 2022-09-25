@@ -15,7 +15,7 @@ const Layout = ({children,togglenav,navopen,bookingform,contactform,setbookingfo
         </main> 
         <div className="clickables">
           <button className="click clickable" onClick={()=>setbookingform(true)}><i class="fa-solid fa-book"></i><span>Book A Room</span></button>
-          <button className="click clickable" onClick={()=>setcontactform(true)}><i class="fa-solid fa-phone"></i><span>Contact Us</span></button>
+          <button className="click clickable" onClick={()=>setcontactform(true)}><i class="fa-solid fa-comment"></i><span>Send A Message</span></button>
         </div>
     <Footer/>
     </>
