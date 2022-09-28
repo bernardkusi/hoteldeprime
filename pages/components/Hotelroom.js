@@ -4,7 +4,10 @@ const Hotelroom = ({room}) => {
   return (
     <div className="room">
 						<div className="roomimage">
-                            <img src={`./images/${room.roomimage}`} alt="roomimage" />
+                            <picture>
+                                {/* <source srcset="sourceset" type="image/svg+xml"> */}
+                                <img src={require(`../../public/images/${room.roomimage}`)} alt={room.roomname} />
+                              </picture>
                         </div>
 						<div className="info">
                             <p className="roomname">{room.roomname}</p>
