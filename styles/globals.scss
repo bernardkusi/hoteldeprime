@@ -370,5 +370,11 @@ footer{
   }
 }
 
+.page{
+  .text{
+    margin-bottom: 3rem;
+  }
+}
+
 @import './reusables';
 @import './media';

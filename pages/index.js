@@ -8,7 +8,7 @@ import Reviews from './components/Reviews';
 import Rooms from './components/Rooms';
 import Services from './components/Services';
 
-export default function Home({closenav,setbookingform}) {
+export default function Home({closenav,setbookingform,rooms}) {
 	useEffect(() => {
 	  closenav();	
 	}, [])
@@ -19,7 +19,7 @@ export default function Home({closenav,setbookingform}) {
 
 		<Homesection setbookingform={setbookingform}/>
 		<Services/>
-		<Rooms/>
+		<Rooms rooms={rooms}/>
 		<Reviews/>
 		<Contact/>
 		</div>

@@ -50,7 +50,7 @@
             width: 22px;
             height: 18px;
             right: 2rem;
-            top: 2rem;
+            top: 1.6rem;
             // background: red;
             transform: scale(1.1);
 
@@ -134,6 +134,10 @@
           &>div{
             width: 100% !important;
             max-width: 420px;
+
+            &.serviceimage{
+              height: 200px;
+            }
           }
         }
     }

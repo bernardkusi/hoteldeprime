@@ -411,6 +411,10 @@ footer div p {
   color: #313131;
 }
 
+.page .text {
+  margin-bottom: 3rem;
+}
+
 .click {
   padding: .9rem 1.2rem;
   font-weight: bold;
@@ -638,7 +642,7 @@ img {
     width: 22px;
     height: 18px;
     right: 2rem;
-    top: 2rem;
+    top: 1.6rem;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
@@ -714,6 +718,9 @@ img {
   #servicepage .serviceflex > div {
     width: 100% !important;
     max-width: 420px;
+  }
+  #servicepage .serviceflex > div.serviceimage {
+    height: 200px;
   }
 }
 
