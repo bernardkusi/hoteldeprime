@@ -9,7 +9,7 @@ const Homesection = ({setbookingform}) => {
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Tempore sequi voluptas recusandae quo?
 				</h3>
-                <button onClick={()=>setbookingform(true)} href="#" className="click">Instant Booking</button>
+                <button onClick={()=>setbookingform(true)} className="click">Instant Booking</button>
 			</div>
 		</div>
 	);
