@@ -15,7 +15,7 @@ const rooms = ({closenav,rooms}) => {
     <Header title={"View all rooms here"}/>
         <h3 className="heading">All Rooms</h3>
         <div className="roomgrid">
-          {rooms.map((room)=><Hotelroom key={room.roomid} room={room}/>)}
+          {rooms && rooms.map((room)=><Hotelroom key={room.roomid} room={room}/>)}
         </div>
     </div>
 </div></>
