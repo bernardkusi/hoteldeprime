@@ -5,10 +5,10 @@ const Hotelroom = ({ room }) => {
 	return (
 		<div className="room">
 			<div className="roomimage">
-					<Image layout='fill'
+					{room.roomimage && (<Image layout='fill'
 						src={`/images/${room.roomimage}`}
 						alt={room.roomname}
-					/>
+					/>)}
 			</div>
 			<div className="info">
 				<p className="roomname">{room.roomname}</p>
