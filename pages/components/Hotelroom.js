@@ -2,8 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 const Hotelroom = ({ room }) => {
-	return (
-		<div className="room">
+	return (room?(<div className="room">
 			<div className="roomimage">
 					<Image layout='fill'
 						src={`/images/${room.roomimage}.jpg`}
@@ -17,8 +16,7 @@ const Hotelroom = ({ room }) => {
 			<button className="click">
 				<i class="fa-solid fa-book"></i>
 			</button>
-		</div>
-	);
+		</div>):<p>Loading</p>)
 };
 
 export default Hotelroom;
