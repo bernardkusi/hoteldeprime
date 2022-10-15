@@ -33,18 +33,15 @@ const Bookingform = ({ rooms, bookingform, closemodals, selectedroom }) => {
 
 					<div className="formcontrol">
 						<select name="room" id="room">
-							{rooms &&
-								rooms.map((room) => (
+							{rooms && rooms.map((room) => (
 									<option
 										key={room.roomid}
 										selected={
-											room.roomid == selectedroom.roomid
-												? 'selected'
-												: ''
+											selectedroom && room.roomid == selectedroom.roomid? 'selected': ''
 										}
 										value={`room${room.roomid}`}
-									>{`Guest Room ${room.roomid}`}</option>
-								))}
+									>{`Guest Room ${room.roomid}`}</option>)
+								)}
 						</select>
 						<label htmlFor="room">Select a room</label>
 					</div>

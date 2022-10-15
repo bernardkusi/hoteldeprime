@@ -32,14 +32,14 @@ const Layout = ({
 					className="click clickable"
 					onClick={() => setbookingform(true)}
 				>
-					<i class="fa-solid fa-book"></i>
+					<i className="fa-solid fa-book"></i>
 					<span>Book A Room</span>
 				</button>
 				<button
 					className="click clickable"
 					onClick={() => setcontactform(true)}
 				>
-					<i class="fa-solid fa-comment"></i>
+					<i className="fa-solid fa-comment"></i>
 					<span>Send A Message</span>
 				</button>
 			</div>
