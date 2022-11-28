@@ -93,7 +93,7 @@
           }
     
           h3{
-            font-size: 1.1rem;
+            font-size: 1.3rem !important;
           }
     
         }
@@ -144,7 +144,6 @@
 }
 
 @media (max-width:760px) {
-
     
     #rooms{
         .roomgrid{
@@ -162,6 +161,30 @@
 
 @media (max-width:570px) {
 
+  nav{
+    top: 3rem;
+    height: 3.2rem;
+    padding-top: .4rem;
+    
+    .bars{
+      top: 1.2rem;
+    }
+  }
+  
+  .links{
+    height: 3rem ;
+    background: #fff;
+    font-size: .9rem;
+  
+    ul{
+      gap: .2rem;
+
+      a{
+         font-size: .85rem;
+        color: rgb(246, 50, 24);
+      }
+    }
+  }
     
     #rooms{
         .roomgrid{

@@ -82,7 +82,7 @@ function MyApp({ Component, pageProps }) {
 	};
 
 	const closemodals = (e) => {
-		if (e.target !== e.currentTarget) {
+		if (e.target !== e.currentTarget)  {
 			return;
 		}
 		setbookingform(false);
