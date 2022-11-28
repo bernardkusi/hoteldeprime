@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Hotelroom from './components/Hotelroom'
 import Pageheader from './components/Pageheader'
 
-const rooms = ({closenav,rooms}) => {
+const rooms = ({closenav,rooms,selectroom}) => {
     // useEffect(() => {
     //     closenav();	
     //   }, [])
@@ -15,7 +15,7 @@ const rooms = ({closenav,rooms}) => {
     <Header title={"View all rooms here"}/>
         <h3 className="heading">All Rooms</h3>
         <div className="roomgrid">
-          {rooms && rooms.map((room)=><Hotelroom key={room.roomid} room={room}/>)}
+          {rooms && rooms.map((room)=><Hotelroom selectroom={selectroom} key={room.roomid} room={room}/>)}
         </div>
     </div>
 </div></>

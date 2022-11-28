@@ -15,11 +15,11 @@ export default function Home({closenav,setbookingform,rooms,selectroom}) {
 	
 	return (
 		<div className={styles.container}>
-			<Pageheader title="Hotel"/>
+		<Pageheader title="Hotel"/>
 
 		<Homesection setbookingform={setbookingform}/>
 		<Services/>
-		<Rooms rooms={rooms} selectroom={selectroom}/>
+		<Rooms rooms={rooms}  selectroom={selectroom}/>
 		<Reviews/>
 		<Contact/>
 		</div>
