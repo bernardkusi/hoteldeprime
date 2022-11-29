@@ -9,9 +9,9 @@ import Rooms from './components/Rooms';
 import Services from './components/Services';
 
 export default function Home({closenav,setbookingform,rooms,selectroom}) {
-	useEffect(() => {
-	  closenav();	
-	}, [])
+	// useEffect(() => {
+	//   closenav();	
+	// }, [])
 	
 	return (
 		<div className={styles.container}>

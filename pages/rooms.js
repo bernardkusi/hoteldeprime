@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Hotelroom from './components/Hotelroom'
 import Pageheader from './components/Pageheader'
 
-const rooms = ({closenav,rooms,selectroom}) => {
+const rooms = ({rooms,selectroom}) => {
     // useEffect(() => {
     //     closenav();	
     //   }, [])
