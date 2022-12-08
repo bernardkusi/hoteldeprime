@@ -108,8 +108,8 @@ main {
 
 main #homesection {
   padding: 9rem 3rem 8rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../public/images/room4.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../public/images/room4.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("/images/room4.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/images/room4.jpg");
   background-size: cover;
   background-position: center;
   min-height: 700px;
@@ -152,7 +152,7 @@ main #services .serviceflex {
 
 main #services .serviceflex .service {
   max-width: 280px;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   -webkit-box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.203);
           box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.203);
   border-radius: .5rem;
@@ -169,6 +169,7 @@ main #services .serviceflex .service p.servicename {
   color: #f63218;
   font-size: .9rem;
   font-weight: 600;
+  padding: .3rem 0;
 }
 
 main #services .serviceflex .service p.servicedetails {
